@@ -1,0 +1,17 @@
+/* .navbar-nav {
+    float: right;
+}
+
+.nav-link {
+    color: aliceblue;
+}
+*/
+.container{
+    background: rgb(65,56,222);
+    background: linear-gradient(90deg, rgba(65,56,222,1) 0%, rgba(16,118,194,1) 0%, rgba(0,212,255,1) 100%);
+} 
+
+.parsley-errors-list {
+    color: red;
+    list-style: none;
+}

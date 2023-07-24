@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+  
+    {% block head %}  {% endblock  %}
+</head>
+<style>
+    table, th, td {
+        border: 1px solid;
+      }
+</style>
+<body>
+    <div class="container">
+        <div class="card mt-3">
+            <div class="card-body hoverable">
+                <div class="row">
+                    <div class="col-md-12">
+                        <center>
+                            {% block body %}  {% endblock  %}
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+</div>
+        <script src="{{ url_for('static', filename='js/jquery.slim.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/parsley.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/sweetalert.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/js.js') }}"></script>
+   
+       
+</body>
+
+</html>

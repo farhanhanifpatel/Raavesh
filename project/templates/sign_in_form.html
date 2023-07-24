@@ -1,0 +1,73 @@
+{% extends 'index.html' %}
+
+
+{% block body  %}
+<h2 class="heading-section pb-5" >Sign_up Here</h2>
+<div class="row justify-content-center">
+    <div class="col-md-12 col-lg-8">
+        <form action="#" method="POST" data-parsley-validate="">
+            {% with messages = get_flashed_messages() %}  
+            {% if messages %}  
+                  {% for message in messages %}  
+                       <p>{{ message }}</p>  
+                  {% endfor %}  
+            {% endif %}  
+            {% endwith %}  
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="First Name" id="f_name" name="f_name" data-parsley-required-message="Enter string value only in first name"
+                data-parsley-type="alphanum" data-parsley-length="[4, 40]" data-parsley-pattern-message="Enter valid details" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last Name" id="l_name" name="l_name" data-parsley-required-message="Enter string value only in last name"
+                data-parsley-type="alphanum" data-parsley-length="[4, 40]" data-parsley-pattern-message="enter valid details" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="user Name" id="u_name" name="u_name" data-parsley-required-message="Enter string value only in user name"
+                data-parsley-type="alphanum" data-parsley-length="[4, 40]" data-parsley-pattern-message="enter valid details" required="">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" id="email" name="email" data-parsley-required-message="Enter your email Address"
+                data-parsley-type="email"  required="">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Phone no" id="phone" name="phone" data-parsley-required-message="Enter phone number"
+                data-parsley-type="digits"  required="">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="city" id="city" name="city" data-parsley-required-message="Enter string value only in user name"
+                data-parsley-type="alphanum" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="state" id="state" name="state" data-parsley-required-message="Enter string value only in user name"
+                data-parsley-type="alphanum"  required="">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Zipcode" id="zipcode" name="zipcode" data-parsley-required-message="Enter Zipcode"
+                data-parsley-pattern="^[0-9]{6}$" data-parsley-pattern-message="enter valid details" required="">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="password" id="pass" name="pass" data-parsley-required-message="Enter pasword"
+                data-parsley-pattern="^[0-9]{6}$" data-parsley-pattern-message="Enter password in six digit" required="">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="conform password" id="c_pass" name="c_pass" data-parsley-required-message="Enter conform password"
+                data-parsley-equalto="#pass"required="">
+            </div>
+            <div class="form-group">
+                <label for ="user_type" class="form-label">Sing up user type</label>
+                <select  class="form-control" name="user_type" id="user_type" required="">
+                    {% for value in values  %}
+                    <option value="{{ value }}"> "{{value}}" </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+                <button type="submit"  class="btn btn-primary submit px-3">Submit</button>
+
+                <a href="/log_in">I have alredy account </a>
+            </div>  
+        </form>
+    </div>
+</div>
+
+{% endblock  %}

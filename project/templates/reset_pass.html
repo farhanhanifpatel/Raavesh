@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+
+
+
+
+
+{% block body  %}
+<body>
+	<center>
+		<h2 class="heading-section pb-5" >Forget password </h2>
+		<div class="row justify-content-center">
+			<div class="col-md-12 col-lg-8">
+                <form action="" method="POST"  onsubmit="return validateForm()"  data-parsley-validate="">
+
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="password" id="pass" name="pass" data-parsley-required-message="Enter pasword"
+                        data-parsley-pattern="^[0-9]{6}$" data-parsley-pattern-message="Enter password in six digit" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="conform password" id="c_pass" name="c_pass" data-parsley-required-message="Enter conform password"
+                        data-parsley-equalto="#pass"required="">
+                    </div>
+
+
+					<div >
+						<button type="submit"  class="btn btn-primary submit px-3">Submit</button>
+					</div>
+                    
+				</form>
+				
+			</div>
+		</div>
+</body>
+{% endblock  %}

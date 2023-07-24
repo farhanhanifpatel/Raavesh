@@ -1,0 +1,30 @@
+{% extends 'home_temp.html' %}
+
+
+{% block body %}
+<center>
+    <div class="row">
+
+        <div class="col-md-12">
+        <h1>post</h1>
+        {% for i in data %}
+
+        <div class="card" style="width: 18rem;">
+            <a href="/post_detail/{{i.car_id}}">
+                <img src ="{{ url_for('static', filename='Assets/card.png') }}" class="card-img-top" >
+            </a>
+            <div class="card-body">
+            <p class="card-text">{{i.car_date}}</p>
+            <h3 class="card-title"> {{i.car_title}} </h3>
+            <h5 class="card-title">  {{i.car_caption}} </h5>
+            <p class="card-text">{{i.car_discriptrion}}</p>
+            </div>
+        </div>
+        <tr> 
+            {% endfor %}  
+        </div>
+    </div>
+</center>
+
+{% endblock  %}
+

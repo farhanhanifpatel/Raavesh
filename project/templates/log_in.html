@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+
+
+
+{% block body %}
+
+<body>
+	<center>
+		<h2 class="heading-section pb-5">Log_in Here</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-12 col-lg-8">
+				<form method="POST" onsubmit="return validateForm()" action="/admin_login" data-parsley-validate="">
+					<div class="form-group">
+						<input type="email" class="form-control" placeholder="Enter email" id="Email" name="Email"
+							required="">
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" placeholder="Password " id="user_password"
+							name="user_password" required="">
+					</div>
+					<div class="col-md-12 col-lg-8">
+						<button type="submit" class="btn btn-primary submit px-3">Log in</button>
+						<a href="/forget_password">forget password </a>
+					</div>
+
+
+					{% with messages = get_flashed_messages() %}
+					{% if messages %}
+					{% for message in messages %}
+					<p>{{ message }}</p>
+					{% endfor %}
+					{% endif %}
+					{% endwith %}
+				</form>
+
+			</div>
+		</div>
+	</center>
+</body>
+{% endblock %}

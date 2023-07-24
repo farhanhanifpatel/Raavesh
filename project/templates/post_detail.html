@@ -1,0 +1,28 @@
+{% extends 'home_temp.html' %}
+
+<style>
+    .card {
+        border: 1px solid;
+      }
+</style>
+
+
+{% block body %}
+<center>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>post</h1>
+            <div class="card" style="width: 18rem;">
+                <img src ="{{ url_for('static', filename='Assets/card.png') }}" class="card-img-top" >
+                <div class="card-body">
+                <p class="card-text">{{data.car_date}}</p>
+                <h3 class="card-title"> {{data.car_title}} </h3>
+                <h5 class="card-title">  {{data.car_caption}} </h5>
+                <p class="card-text">{{data.car_discriptrion}}</p>
+            </div>
+        </div>
+    </div>
+</center>
+
+{% endblock  %}
+

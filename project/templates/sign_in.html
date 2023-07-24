@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+
+<head>
+
+
+</head>
+<style>
+
+</style>   
+
+{% block body %} 
+<h1> Welcome to Raaves </h1>
+<form action="#"  data-parsley-validate="">	
+    <div class="col-md-12">
+        <img class="card-img-bottom-fluid" src ="{{ url_for('static', filename='Assets/card.png') }}" style="width:50%; height:100%;">
+    </div>				
+    <div class="btn">
+        <a href="/signuptemp">click here to sign-up</a>
+    </div>
+</form>   
+{% endblock body %}

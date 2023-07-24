@@ -1,0 +1,1 @@
+from .staticdata import *

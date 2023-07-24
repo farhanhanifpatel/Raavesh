@@ -1,0 +1,32 @@
+{% extends 'home_temp.html' %}
+
+
+{% block body %}
+<center>
+    <h2 class="heading-section pb-5" >Uplode Post Here</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8">
+            <form action="#" method="POST" data-parsley-validate="">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Post image" id="post_img" name="post_img" required="" >
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Post title" id="post_title" name="post_title" required="">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Post caption" id="post_captrion" name="post_captrion"  required="">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Post Discription" id="posT_discription" name="posT_discription"  required="" >
+                </div>
+                <div>
+                    <button type="submit"  class="btn btn-primary submit px-3">Submit</button>
+                </div>  
+            </form>
+        </div>
+    </div>
+</center>
+
+
+{% endblock  %}
+
